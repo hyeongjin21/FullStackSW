@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        inline 방식 : 태그 안에 직접 기능을 정의하거나 연결
+        태그에 on이벤트명 속성을 사용해서 연결
+    -->
+    <button onclick="alert('이벤트 출력')">인라인 알림창 출력</button><br>
+    <button onclick="alert2()">인라인 알림창 출력(스크립트 태그 연결)</button>
+
+    <script>
+        // Event Handler : 사용자가 이벤트를 발생시켰을 때,
+        // 그 이벤트에 대응하여 작동하는 함수
+
+        // inline 방식 정리
+        // 1. inline 방식은 현재 권장되지 않는 방식이다
+        // 2. 단점 : 코드가 그대로 노출된다. 이벤트 핸들러를 1개만 등록 가능
+        // 3. 사용처 : 아주 간단한 내장함수 연결 정도에만 사용
+        const alert2 = () =>{
+            alert("두번째 이벤트 출력");
+        }
+    </script>
+</body>
+</html>

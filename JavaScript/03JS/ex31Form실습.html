@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" id="inputText">
+        <input type="button" value="출력" onclick="printHandle()">
+    </form>
+    <p id="printText"></p>
+    
+    <script>
+        const printHandle = () =>{
+            // 실습) 버튼을 누르면 input의 내용을 p태그에 적힐 수 있도록 하자
+            const inputText = document.getElementById("inputText").value;
+            document.getElementById("printText").innerText = inputText;
+        }
+    </script>
+</body>
+</html>

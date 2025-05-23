@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열 : 같은 타입의 여러 변수를 하나의 묶음으로 다루는 데이터 형태
+        // 배열을 나타내는 기호 : []
+
+        // 1. 배열의 선언 / 할당
+        // 1-1) 빈 배열 선언
+        let empty = [];
+        console.log("빈 배열 선언",empty);
+
+        // 1-2) 길이가 있는 빈 배열 선언
+        let empty5 = new Array(5);
+        console.log("길이가 5인 빈 배열 선언",empty5);
+
+        // 1-3) 일반 배열 선언
+        let fruits =["사과","배","오렌지"];
+        console.log(fruits);
+        
+        // 2. 배열의 접근 : 배열이름[인덱스]
+        console.log(fruits[2]);
+
+        // 3. 배열의 값 변경 : 배열이름[인덱스] = 새로운 값
+        fruits[1] = "포도";
+        console.log(fruits);
+
+        // 4. 배열 값 추가
+        fruits[3] = "딸기";
+        console.log(fruits);
+
+        // 5. 배열 내 전체 데이터 순회
+        for(let i = 0; i<fruits.length;i++){
+            console.log("for문 순회",fruits[i]);
+        }
+        
+        // 6. 배열 내 전체 데이터 순회 : for~of문
+        for(let fruit of fruits){
+            console.log("for~of문 순회",fruit);
+        }
+
+        
+
+    </script>
+</body>
+</html>

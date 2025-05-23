@@ -1,0 +1,22 @@
+이름 : 조준용
+번호 : 010-3568-3904
+이메일 : rtcho3904@naver.com
+
+show user;
+-> 나의 현 계정 상태를 확인하는 명령어
+
+connect 계정명 / 비밀번호 ;
+-> 해당 계정에 접속하는 명령어
+
+connect system / 12345; -> 최고관리자 계정에 접속
+
+alter user hr identified by 12345;
+-> hr 계정의 비밀번호를 12345로 변경하는 명령어
+
+alter user hr account unlock;
+-> hr 계정의 lock을 풀어주는 명령어
+
+SELECT first_name , last_name
+FROM EMPLOYEES;
+
+C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql

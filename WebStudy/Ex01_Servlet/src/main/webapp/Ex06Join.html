@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+        HTML entity(엔티티)
+        - &nbsp; : 스페이스(빈칸)
+        - &lt; : <
+        - &gt; : >
+    -->
+    <form action="Join" method="POST">
+        <table width="400px">
+            <tr bgcolor="gray" height="50px">
+                <th colspan="2" align="left">Step1 : 아이디/비번 입력</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">아이디 :&nbsp;</td>
+                <td>
+                    <input type="text" name="userid" id="userid">
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">비밀번호 :&nbsp;</td>
+                <td>
+                    <input type="password" name="userpw" id="userpw">
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">비밀번호 확인 :&nbsp;</td>
+                <td>
+                    <input type="password" name="userpw_re" id="userpw-re">
+                </td>
+            </tr>
+
+            <tr bgcolor="gray" height="50px">
+                <th colspan="2" align="left">Step2 : 개인정보</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">성별 :&nbsp;</td>
+                <td>
+                    <label for="male">남</label>
+                    <input type="radio" name="gender" id="male" value="남" checked>
+                    <label for="female">여</label>
+                    <input type="radio" name="gender" id="female" value="여">
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">혈핵형 :&nbsp;</td>
+                <td>
+                    <select name="blood" id="blood">
+                        <option value="A">A형</option>
+                        <option value="B">B형</option>
+                        <option value="O">O형</option>
+                        <option value="AB">AB형</option>
+                    </select>
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">생일 :&nbsp;</td>
+                <td>
+                    <input type="date" name="birth" id="birth">
+                </td>
+            </tr>
+        
+            <tr bgcolor="gray" height="50px">
+                <th colspan="2" align="left">Step3 : 선호도</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">취미 :&nbsp;</td>
+                <td>
+                    <label for="soccer">축구</label>
+                    <input type="checkbox" name="favorite" id="soccer" value="축구">
+                    <label for="baseball">야구</label>
+                    <input type="checkbox" name="favorite" id="baseball" value="야구">
+                    <label for="basketball">농구</label>
+                    <input type="checkbox" name="favorite" id="basketball" value="농구">
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">좋아하는 색깔 :&nbsp;</td>
+                <td>
+                    <input type="color" name="color" id="color">
+                </td>
+            </tr>
+
+            <tr bgcolor="gray" height="50px">
+                <th colspan="2" align="left">Step4 : 자기소개</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td colspan="2">
+                    <textarea name="introduce" id="introduce" cols="52" rows="7"></textarea>
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td colspan="2" align="center">
+                    <input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

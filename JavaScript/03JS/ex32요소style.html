@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tit{
+            background-color: black;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">요소 스타일 변경하기</h1>
+
+    <button onclick="changeStyle()">h1 스타일 변경하기</button>
+
+    <script>
+        // 요소의 CSS(스타일) 변경하기
+        // 요소명.style.css요소
+        // css요소에 접근할 때는, 케밥케이스가 아니라 카멜케이스로 접근해야한다
+        // style 객체로는 css에서 변경한 속성값을 가져올 수 없다
+        const changeStyle = () =>{
+            const tit = document.getElementById('tit');
+            console.log('배경화면 색상 변경전 : ',tit.style.backgroundColor);
+            console.log(tit);
+            tit.style.backgroundColor = "blue"; // 배경
+            tit.style.color = 'yellow';  // 글자 색
+            tit.style.fontSize = '20px';
+            tit.style.display = 'inline-block';
+            console.log('배경화면 색상 변경후 : ',tit.style.backgroundColor);
+        }
+    </script>
+</body>
+</html>

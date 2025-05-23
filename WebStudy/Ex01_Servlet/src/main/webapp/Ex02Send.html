@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 서버로 데이터를 전송하기 위해서는 form 태그를 사용해야 한다 -->
+	<!-- 
+		** form 태그의 3요소
+		1. 어떤 Servlet으로 요청을 보낼지 : action
+		2. 어떤 데이터를 전송할지 : name
+		3. 언제 데이터를 전송할지 : submit
+	 -->
+	 
+	 <form action="Ex03_DataSend">
+	 	DATA : <input type="text" name="message">
+	 	<input type="submit" value="메세지 전송">
+	 </form>
+
+</body>
+</html>

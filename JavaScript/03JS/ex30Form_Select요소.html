@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="frm" action="#" onsubmit="return false;">
+        <select name="major" id="major">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </select>
+        <input type="submit" value="전송" onclick="send()">
+    </form>
+    <script>
+        // select 요소 접근
+        // form요소.(elements.)select이름
+        //  : select요소의 name 속성값을 통해 form요소에서 바로 접근
+        //  : 충돌의 위험이 있기 때문에, elements객체를 통해서 접근하는 것을 권장
+        //  : id, calass, querySelector 등을 통한 접근도 가능
+        const selectElement = document.forms.frm.major;
+        console.log(selectElement);
+
+        // option 요소 접근
+        // select요소.options 부자별
+        //  : 유사배열 형태로 변환
+        //  : selectdIndex 프로퍼티를 통새서 현재 선택된 옵션을 확인 가능
+        const options = selectElement.options;
+        console.log(options);
+
+        const send = () => {
+            const options = document.forms.frm.elements.major.options;
+            console.log(options.selectedIndex);
+
+            console.log(options[options.selectedIndex].value);
+        }
+
+    </script>
+</body>
+</html>

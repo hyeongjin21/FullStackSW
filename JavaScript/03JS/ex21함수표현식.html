@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 기존 함수 선언
+        function func1() {
+            console.log("기존 함수 선언");
+        }
+
+        // 함수 표현식
+        const func = function () {
+            console.log("함수 표현식");
+        }
+        func();
+
+        const greet = () => {
+            console.log("화살표 함수");
+        }
+        greet();
+
+        const greet2 = (name) => {
+            console.log(`안녕하세요 ${name}입니다.`);
+        }
+        greet2("김형진");
+
+        // 인자값이 1개 있는 경우 : () 생략 가능
+        // 인자값이 없거나 여러개인 경우 : () 생략 불가능
+        const greet3 = name => {
+            console.log(`My name is ${name}`);
+        }
+        greet3("김형진");
+
+        const greet4 = name => {
+            return `My name is ${name}4`;
+        }
+        console.log(greet4("김형진"));
+
+        // {}와 return 생략이 가능하다. 단 동시에 생략이 가능하다
+        // {}와 return 생략되었을 때는 반드시 return문 1줄만 있어야 한다
+        // 함수의 본문영역(코드블럭)에 {}가 없는 경우, 반드시 return 이 생략되어 있다
+        // greet4, greet5, greet6, greet7 함수는 전부 같은 함수이다.
+        const greet5 = name => `My name is ${name}5`;
+        const greet6 = name => (`My name is ${name}6`);
+        const greet7 = (name) => (`My name is ${name}7`);
+        console.log(greet5("김형진"));
+        console.log(greet6("김형진"));
+        console.log(greet7("김형진"));
+
+
+    </script>
+</body>
+
+</html>

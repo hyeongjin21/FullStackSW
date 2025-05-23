@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="list">
+        <li>HTML</li>
+    </ul>
+
+    <script>
+        // document.createElement(tagName);
+        // 지정한 태그 이름을 가지는 새로운 HTML 요소를 생성
+        // document.createTextNode("컨텐츠");
+        // 컨텐츠를 포함하는 택스트 노드를 생성
+        // 부모요소.appendChild(childNode);
+        // 지정된 자식 요소를 부모 요소에 추가한다. (가장 마지막에 추가한다.)
+        // 요소.setAttribute(속성이름,속성값)
+        // 요소에 특정 속성을 추가/변경
+
+        // ul의 자식요소로 css,javascript라는 내용의 li태그를 추가해보자
+        const list = document.getElementById('list');
+
+        // 첫번째 li 요소 (CSS)
+        const newLi1 = document.createElement("li");
+        const newLiText1 = document.createTextNode("CSS");
+        newLi1.appendChild(newLiText1);
+        list.appendChild(newLi1);
+
+        // 두번째 li 요소(javaScript)
+        const newLi2 = document.createElement("li");
+        const newLiText2 = document.createTextNode("JavaScript")
+        newLi2.appendChild(newLiText2);
+        list.appendChild(newLi2);
+
+        // 세번째 li 요소 (이미지)
+        const newLi3 = document.createElement("li");
+        const newLiImg3 = document.createElement("img");
+        newLiImg3.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUcAWcI9SnKzeQ2g4J698TPfGk3LTghm9iPw&s")
+        newLi3.appendChild(newLiImg3);
+        list.appendChild(newLi3);
+
+        // 새로 생성한 img 요소에 Event 부착
+        newLiImg3.addEventListener('click', () => {
+            alert("이미지 클릭");
+        })
+
+        // css 요소를 부모 요소에서 제거
+        list.removeChild(newLi1);
+
+        // javascript 요소를 삭제
+        newLi2.remove();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <script>
+
+        // 호이스팅 현상 : 코드가 실행되면 변수, 함수를 저장
+        // 선언되기 전에 사용해도 문제가 발생하지 않는다
+        // var는 호이스팅 현상이 발생
+        
+        // let, const는 호이스팅 현상이 발생하지 않는다
+        // 엄밀히 말하면 호이스팅 현상이 발생하지만,
+        // TDZ(Temporal Death Zone)에 저장하여 선언 이전에는 
+        // 접근하지 못하게 막는다
+
+        // 변수 : 데이터를 담는 공간
+        // 1. var
+        var color = "black"; // 선언/할당
+        var color = "red" ; // 재선언 가능
+        color = "yellow"; // 재할당 가능
+
+        // 2. let (ES6이후 등장)
+        let color2 = "black";
+        // let color2 = "blue"; // 재선언 불가능
+        color2 = "green"; // 재할당 가능
+
+        // 3. const (ES6이후 등장)
+        const color3 = "black";
+        // const color3 = "pink"; // 재선언 불가능
+        // color3 = "gray"; // 재할당 불가능
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light{
+            background-color: white;
+            color: black;
+        }
+        .black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="light">
+    <div id="contain" class="light">
+        <h1>Light/Dark Mode 실습</h1>
+        <button id="changeBtn" onclick="changeMode()">Dark Mode</button>
+        <!-- <button id="changeBtn2" onclick="changeMode2()">Dark Mode</button> -->
+    </div>
+
+    <script>
+
+        const content = document.getElementById('contain');
+        // const con = document.getElementsByTagName('body')[0];
+
+        const changeMode = () =>{
+            content.classList.toggle('light');
+            content.classList.toggle('black');
+            if(content.classList.contains('light')){
+                document.getElementById('changeBtn').innerText = 'Dark Mode';
+            }else{
+                document.getElementById('changeBtn').innerText = 'Light Mode';
+            }
+        }
+        
+        // const changeMode2 = () =>{ 
+        //     con.classList.toggle('light');
+        //     con.classList.toggle('black');
+        //     console.log(document.getElementsByTagName('button')[1].innerText);
+        //     if(con.classList.contains('light')){
+        //         document.getElementById('changeBtn2').innerText = 'Dark Mode';
+        //     }else{
+        //         document.getElementById('changeBtn2').innerText = 'Light Mode';
+        //     }
+        // }
+    </script>
+</body>
+</html>

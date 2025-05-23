@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tit">Hello DOM!</h1>
+
+    <p class="content">p태그1</p>
+    <p class="content">p태그2</p>
+    <p>p태그3</p>
+
+    <script>
+        // DOM(Document Object Model)
+        // HTML문서의 요소를 JavaScript에서 다룰 수 있도록
+        // 모든 요소를 분리하여, 트리 구조의 객체로 구조화한 형태
+
+        // document 객체 : 웹 페이지 자체를 가리키는 객체
+        // HTML 요소에 접근하기 위해서는 반드시 이 객체를 지나야 한다
+
+        // 1. id를 통해서 웹 문서 내의 요소에 접근
+        // document.getElementById("아이디값");
+        const h1Tag = document.getElementById("tit");
+        console.log(h1Tag);
+        console.log(typeof h1Tag);
+
+        // 접근한 요소의 내용 가져오기
+        // innerText : 요소가 가진 내용을 문자열로 반환
+        // innerHTML : 요소가 가진 내용(텍스트 + 태그)를 문자열로 반환
+        console.log('h1의 innerText : ',h1Tag.innerText);
+        console.log('h1의 innerHTML : ',h1Tag.innerHTML);
+
+        // 접근한 요소의 내용 변경하기
+        // innerText : 요소의 내용을 문자열로 수정(태그를 문자열로 인식)
+        // innerHTML : 요소의 내용을 문자열+태그로 수정(태그를 브라우저가 인식)
+        h1Tag.innerText = "안녕하세요 DOM!";
+        h1Tag.innerText = "<a href='https://www.naver.com'>네이버로 이동</a>";
+        h1Tag.innerHTML = "<a href='https://www.naver.com'>네이버로 이동</a>";
+        
+
+        // 2. class를 통해서 웹 문서 내의 요소에 접근
+        // document.getElementsByClassName('클래스값');
+        const contents = document.getElementsByClassName('content');
+        console.log(contents); // 유사 배열
+        console.log(contents[0]);
+
+        // 3. tag이름을 이용해서 웹 문서 내의 요소에 접근
+        // document.getElementsByTagName('태그이름');
+        const pTags = document.getElementsByTagName('p');
+        console.log(pTags); // 유사 배열
+        console.log(pTags[2]);
+
+        // 접근한 요소의 내용 가져오기
+        console.log('1번 p 태그의 innerText : ',pTags[0].innerText);
+        console.log('2번 p 태그의 innerText : ',pTags[1].innerText);
+
+        // 접근한 요소들의 전체 내용 가져오기(순회)
+        for(let i = 0 ;i < pTags.length; i++){
+            console.log('p 태그의 innerText : ',pTags[i].innerText);
+        }
+
+        // 4. querySelector를 통한 웹 문서 내의 요소 접근
+        // document.querySelector('선택자'); => 첫번째 요소만 가져온다
+        // document.querySelectorAll('선택자'); => 모든 요소를 가져온다
+        // CSS 선택자를 그대로 사용할 수 있어서 매우 직관적이다
+
+        // id 선택자
+        const h1Tit = document.querySelector('#tit');
+        console.log('querySelector id : ',h1Tit);
+
+        // class 선택자
+        const firstContent = document.querySelector('.content');
+        console.log('querySelector class : ',firstContent);
+        
+        // 태그 선택자
+        const firstPTag = document.querySelector('p');
+        console.log('querySelector tag : ',firstPTag);        
+
+        // 여러 요소 선택(querySelectorAll)
+        const allPTags = document.querySelectorAll('p');
+        console.log(allPTags);
+
+    </script>
+</body>
+</html>

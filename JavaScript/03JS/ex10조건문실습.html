@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 색깔을 입력받아서 배경색을 바꿔보자
+
+        // 1. 색깔을 입력받는다. ("빨강","파랑","초록")
+        let color = prompt("색깔을 입력해주세요!","빨강")
+        
+        // 2. 색깔의 종류에 따라 배경색을 변경한다.
+        if(color === "빨강"){
+            // 뒤에서 배우게 될 DOM 문법
+            document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+            console.log("빨강");
+        }else if(color === "파랑"){
+            document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+            console.log("파랑");
+        }else if(color === "초록"){
+            document.getElementsByTagName("body")[0].style.backgroundColor = "green";
+            console.log("초록");
+        }else{
+            document.getElementsByTagName("body")[0].style.backgroundColor = color;
+            console.log(color);
+        }
+    </script>
+</body>
+</html>

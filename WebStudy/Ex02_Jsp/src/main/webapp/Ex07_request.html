@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 내장객체 : Jsp가 servlet의 일종으로, servlet으로 변환될 때
+			  자동으로 선언되는 객체를 의미(request, response, out..)
+			: jsp내에서 선언하지 않고 사용 가능
+			: jsp내에서 선언하려고 하면 오류 발생			  
+-->
+<!-- 사용자에게 점수를 입력 받아서 post방식으로 전송(-> Ex07_request.jsp -->
+<!-- action(servlet) : url mapping값
+		   (jsp) : 상대경로
+ -->
+<form action="Ex07_request.jsp" method="post">
+	<fieldset>
+	<legend>학점 확인 프로그램</legend>
+	<table>
+		<tr><td>이름 </td><td><input type="text" name="name" id="uname"></td></tr>
+		<tr><td>Java 점수</td><td><input type="text" name="javaScore" id="javaScore"></td></tr>
+		<tr><td>Python 점수</td><td><input type="text" name="pythonScore"id="pythonScore"></td></tr>
+		<tr><td>Web 점수</td><td><input type="text" name="WebScore"id="WebScore"></td></tr>
+		<tr><td>ML 점수</td><td><input type="text" name="MLScore"id="MLScore"></td></tr>
+		<tr><td colspan="2"><input type="submit" value="확인하기"></td></tr>
+	</table>
+	</fieldset>
+</form>
+
+</body>
+</html>

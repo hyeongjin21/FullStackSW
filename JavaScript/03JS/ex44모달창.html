@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modalBackGround {
+            position: fixed;
+
+            height: 100vh;
+            width: 100vw;
+            /*vh : view heigth  vw : view width*/
+
+            left: 0;
+            top: 0;
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgba(0, 0, 0, 0.5);
+            /* rgba : 투명도를 주기 위한 함수 */
+        }
+
+        #modal {
+            background-color: white;
+            padding: 20px;
+            width: 200px;
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">모달창 열기</button>
+
+    <div id="modalBackGround">
+        <div id="modal">
+            <p>모달 내용입니다.</p>
+            <button id="closeBtn">닫기</button>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const closeBtn = document.getElementById('closeBtn');
+        const modal = document.getElementById('modal');
+        const modalBackGround = document.getElementById('modalBackGround');
+
+        // 모달창 열기
+        // display : none -> display : flex
+        // 화면에 나타나는 효과
+        btn.addEventListener('click', () => {
+            modalBackGround.style.display = 'flex';
+        });
+
+        // 모달창 닫기
+        // display : flex -> display : none
+        // 화면에서 사라지는 효과
+        closeBtn.addEventListener('click',()=>{
+            modalBackGround.style.display = 'none';
+        });
+
+        // 모달창 닫기(배경 화면 눌러서)
+        // 닫힘 버튼과 동일하게 작동
+        modalBackGround.addEventListener('click',()=>{
+            modalBackGround.style.display = 'none';
+            // 닫힘 버튼을 클릭하게 하는 효과
+            // closeBtn.click();
+        });
+
+        // 모달창 클릭
+        // 부모요소로의 이벤트 전파를 막아, 모달창 자체를 클릭했을 때
+        // 모달창이 닫아지는 것을 방지 (버블링 방지)
+        modal.addEventListener('click',e=>{
+            e.stopPropagation();
+        });
+        
+    </script>
+</body>
+
+</html>

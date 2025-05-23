@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="msg">오늘 날씨가 흐리네요</p>
+    <button onclick="elementChange()">내용 변경</button>
+    <script>
+        const elementChange = () => {
+            // console.log('함수 연결 성공');
+            const pTag = document.getElementById('msg');
+            console.log(pTag.innerText);
+            
+            pTag.innerText = '비는 내리지 않았으면 좋겠어요';
+        }
+    </script>
+</body>
+</html>

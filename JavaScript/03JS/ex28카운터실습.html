@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>숫자 카운팅 실습</h1>
+    <p id="num">0</p>
+
+    <!-- 
+        onclick : 클릭했을 때, 특정 JavaScript 함수를 실행할 수 있도록 연결하는 속성
+    -->
+
+    <button onclick="increase()">+1 증가</button>
+    <button onclick="decrease()">-1 감소</button>
+    <script>
+        let pTag = document.getElementById('num');
+        const increase = () => {
+            // 실습1). 숫자 정보를 가진 p요소 객체에 접근
+            console.log('increase 실행');
+            // 실습2). p요소의 컨텐츠(내용)을 +1 적용하기
+            pTag.innerText = parseInt(pTag.innerText) + 1;
+        }
+        
+        const decrease = () => {
+            // 실습1). 숫자 정보를 가진 p요소 객체에 접근
+            console.log('decrease 실행');
+            // 실습2). p요소의 컨텐츠(내용)을 -1 적용하기(0 이하로 떨어지지 않게하기)
+            if (parseInt(pTag.innerText) > 0) {
+                pTag.innerText = parseInt(pTag.innerText) - 1;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

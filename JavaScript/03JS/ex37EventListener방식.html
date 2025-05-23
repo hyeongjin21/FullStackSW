@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">리스너 방식</button>
+
+    <script>
+        // addEventListener 방식
+        // HTML 요소에 EventListener를 부여해서, 이벤트를 처리
+        // 장점 : HTML과 JavaScript가 엄격히 구분, 이벤트 핸들러를 여러 개 연결 가능
+        // 사용처 : 가장 권장되는 방법으로 특별한 이유가 없다면 무조건 사용
+
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            alert("이벤트 리스너 연결 실행");
+        });
+
+        const alert2 = () => {
+            alert("이벤트 리스너 연결 실행2");
+        };
+
+        btn.addEventListener('click', alert2);
+
+    </script>
+</body>
+
+</html>

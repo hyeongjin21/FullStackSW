@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 내가 숫자를 prompt로 입력받았다고 가정
+        let num1 = "15";
+        let num2 = "10";
+
+        // 문자열 -> 숫자형 변환
+        // Number(문자열) : 문자열을 숫자로 변환
+        // parseInt(문자열) : 문자열을 정수로 변환
+        // parseFloat(문자열) : 문자열을 실수로 변환
+        let n1 = Number(num1);
+        let n2 = parseInt(num2);
+
+        console.log(num1,n1);
+        console.log(num2,n2);
+        
+        console.log(num1 + " + " + num2 + " = " + (num1+num2));
+        console.log(num1 + " + " + num2 + " = " + (n1+n2));
+        
+        console.log(`${num1} + ${num2} = ${n1+n2}`);
+        
+        // 숫자형 -> 문자열로 변환
+        // 변수.toString() : 데이터를 문자열로 변환
+        // String(데이터) : 데이터를 문자열로 변환
+        let num3 = 20;
+        let num4 = 30;
+
+        let str3 = num3.toString();
+        let str4 = String(num4);
+
+        console.log(typeof(str3));
+        console.log(typeof(str4));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 독감 검진 프로그램
+        // 1. 독감 검진을 받았는지 확인한다(confirm)
+        // 2. 독감 여부를 입력 받자(prompt, 양성/음성)
+        // 3-1. 독감 양성이면 화면을 빨갛게 만들고, 양성입니다 라는 경고창 띄우기(alert)
+        // 3-2. 독감 음성이면 화면을 초록색으로 만들고, 음성입니다 라는 경고창 띄우기
+        // 4. 독감 검진을 아예 안받았다면, 검사 안내창 띄우기 '검사를 받고 오세요'띄우기
+        let isCheck = confirm("독감 검진을 받으셨나요?");
+        if(isCheck){
+            let hasCheck = prompt("독감인가요?","양성,음성");
+            if(hasCheck === "양성"){
+                document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+                alert("양성입니다!");
+            }else if(hasCheck === "음성"){
+                document.getElementsByTagName("body")[0].style.backgroundColor = "green";
+                alert("음성입니다!");
+            }
+        }else{
+            alert("검사를 받고 오세요~")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .text{
+            color: blue;
+            font-size: 20px;
+        }
+        .bg{
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="box text">class 속성 다루기</div>
+    <button onclick="toggleClass()">토글</button>
+    <button onclick="addClass()">클래스 추가</button>
+    <button onclick="removeClass()">클래스 삭제</button>
+
+    <script>
+        
+        // 요소의 class 속성값 제어
+        // 1. 요소명.classList : 클래스 목록확인하기
+        // 2. 요소명.classList.add('클래스명') : 클래스 추가하기
+        // 3. 요소명.classList.remove('클래스명') : 클래스 삭제하기
+        // 4. 요소명.classList.contains('클래스명') : 클래스 보유 여부 확인하기(return 논리값)
+        // 5. 요소명.classList.toggle('클래스명') : 클래스가 있다면 삭제, 없다면 추가
+        
+        const content = document.getElementById("content");
+        // 클래스 목록 확인
+        console.log(content.classList);
+        console.log(content.classList[0]);
+
+        // 클래스 추가
+        const addClass = () =>{
+            content.classList.add('bg');
+        }
+
+        // 클래스 삭제
+        const removeClass = () =>{
+            content.classList.remove('bg');
+        }
+
+        // 클래스 토글
+        const toggleClass = () =>{
+            // 클래스 확인
+            if(content.classList.contains('bg') === true){
+                console.log('bg class 보유');
+            }else{
+                console.log('bg class 미보유');
+            }
+            content.classList.toggle('bg');
+        }
+
+    </script>
+</body>
+</html>

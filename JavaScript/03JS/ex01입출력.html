@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+
+    <script>
+
+        // 주석 형태 : //, /**/ (JAVA와 동일)
+        /*
+        
+        */
+        
+        // 1. 출력문
+        // 1-1) console.log(); : 콘솔창에 출력 (F12 개발자 도구 -> console 탭)
+
+        console.log("Hello World");
+        console.error("error!")
+        console.warn("warn");
+
+        // 1-2) document.write(); : HTML 문서에 출력
+        // HTML 태그와 함께 사용이 가능
+        document.write("Hello World");
+        document.write("<h2>반갑습니다.</h2>")
+
+        // 1-3) alert : 팝업창으로 출력
+        // alert("안녕하세요");
+
+        // 2. 입력문
+        // 2-1) confirm : 확인 질문하기
+        // return 타입 : boolean
+        var breakfast = confirm("오늘 아침 드셨나요?");
+        console.log("breakfast",breakfast);
+
+        // 2-2) prompt : 입력문
+        // return 타입 : string
+        var breakfast2 = prompt("아침 메뉴는 무엇을 드셨나요?");
+        console.log("breakfast2",breakfast2);
+
+    </script>
+</body>
+</html>

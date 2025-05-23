@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수 : 특정 기능을 수행하는 소스코드를 하나로 묶어
+        //       호출하는 코드 블럭
+
+        // 함수의 구조
+        // function 함수이름(){
+        //      내용
+        // }
+        // () : 매개변수 (함수의 재료)
+        // {} : 코드블록 (함수를 호출하였을 때 실행되는 로직)
+
+        // 함수 사용
+        // 함수명(매개변수, ...);
+
+        // 1. 매개변수, return값 없는 함수
+        function greet(){
+            console.log("안녕하세요");
+        }
+        greet();
+
+        // 2. 매개변수는 있고, return값 없는 함수
+        function greetName(name){
+            console.log(`안녕하세요 저는 ${name}입니다.`);
+        }
+        greetName("김형진");
+
+        // 3. return값(반환값)이 있는 함수
+        function sum(num1,num2){
+            return num1 + num2;
+        }
+        let num3 = sum(1,2);
+        console.log(num3);
+
+        // 4. return문이 가지는 의미
+        // 1) 값을 반환한다.
+        // 2) 함수를 바로 종료한다.
+        function minus(num1,num2){
+            return num1 - num2;
+            console.log("num1,num2 : ",num1,num2);
+        }
+        let num4 = minus(5,2);
+        console.log(num4);
+
+        // 5. return문을 이용한 함수의 조기종결
+        // early return pattern (조기 반환 패턴)
+        // 함수 내에서 예외 조건을 설정하고, 먼저 검사해서
+        // return문을 통해 함수를 조기에 종결시키는 패턴
+        function divide(num1,num2){
+            if(num2 === 0){
+                console.log("0으로는 나눌 수 없습니다.")
+                return;
+            }
+            console.log(`${num1} / ${num2} = ${num1/num2}`);
+        }
+        divide(1,0);
+
+        // 6. 함수의 호이스팅
+        // var 변수와 동일하게 function 함수 역시 호이스팅이 발생
+
+
+    </script>
+</body>
+</html>

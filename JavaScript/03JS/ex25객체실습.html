@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 포켓몬 객체 배열 만들기
+        // 3마리 => name, type, skill(메소드)
+        // ex) 피카츄, 전기, 백만볼트
+
+        // 콘솔창에 출력
+        // 제가 가진 포켓몬은 파이리, 이상해씨, 꼬부기입니다.
+        // 제가 가장 좋아하는 포켓몬은 파이리이고, 불타입입니다.
+
+        let pokemon1 = {
+            name: "파이리",
+            type: '불',
+            skill () {
+                console.log("불꽃세례");
+            }
+        }
+        let pokemon2 = {
+            name: '이상해씨',
+            type: '풀',
+            skill () {
+                console.log("덩굴채찍");
+            }
+        }
+        let pokemon3 = {
+            name: '꼬부기',
+            type: '물',
+            skill () {
+                console.log('물대포');
+            }
+        }
+        let pokemons = [pokemon1, pokemon2, pokemon3];
+
+        let name = [];
+        for (let i = 0; i < pokemons.length; i++) {
+            name.push(pokemons[i].name);
+        }
+
+        console.log(`제가 가진 포켓몬은 ${name}입니다.`);
+        console.log(`제가 가장 좋아하는 포켓몬은 ${pokemon1.name}이고, ${pokemon1.type}타입입니다.`);
+
+    </script>
+</body>
+
+</html>

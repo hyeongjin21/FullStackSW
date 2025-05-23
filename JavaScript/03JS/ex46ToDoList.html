@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>간단한 할 일 목록</h1>
+        할일입력 : <input type="text" id="inputToDo">
+        <button id="add">추가</button>
+        <ul id="todoList">
+    
+        </ul>
+    </div>
+</body>
+<script>
+    const add = document.getElementById("add");
+    const todoList = document.getElementById("todoList");
+    const inputToDo = document.getElementById("inputToDo");
+
+    add.addEventListener("click", () => {
+        const newLi = document.createElement("li");
+        const removeBtn = document.createElement("button");
+
+        removeBtn.innerText = '삭제';
+
+        newLi.appendChild(document.createTextNode(inputToDo.value));
+        newLi.appendChild(removeBtn);
+        todoList.appendChild(newLi);
+
+        inputToDo.value = '';
+
+        removeBtn.addEventListener("click", (e) => {
+            // e.target.parentElement.remove();
+            newLi.remove();
+            newLi = null;
+        })
+    })
+
+</script>
+</body>
+
+</html>

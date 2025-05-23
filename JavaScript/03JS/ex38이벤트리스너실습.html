@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="firstInput"><br>
+    <input type="text" id="secondInput"><br>
+    <button id="btn">연산결과</button><br>
+    <button id="reset">리셋</button>
+    <p id="result">연산결과 : </p>
+
+    <script>
+        // 1. btn 버튼에 addEventListener를 이용하여 click 이벤트를 추가한다
+        // 2. 버튼을 눌렀을 때 firstInput과 secondInput의 값을 가져와서 더한다
+        // 3. 더한 값을 result p태그에 적는다.
+        const btn = document.getElementById('btn');
+        const num1 = document.getElementById('firstInput');
+        const num2 = document.getElementById('secondInput');
+        const result = document.getElementById('result');
+        btn.addEventListener('click',()=>{
+            const sum = parseInt(num1.value) + parseInt(num2.value);
+            result.innerText = `연산결과 : ${sum}`;
+        });
+        const reset = document.getElementById('reset');
+        reset.addEventListener('click',()=>{
+            num1.value = null;
+            num2.value = null;
+            result.innerText = `연산결과 : `;
+        })
+    </script>
+</body>
+</html>

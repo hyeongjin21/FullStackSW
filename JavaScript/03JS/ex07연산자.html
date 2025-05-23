@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 증감연산자 : 변수 앞 또는 뒤에 사용해서 +1, -1 해주는 연산자
+        // 전위증감연산자 : ++num, --num
+        // 후위증감연산자 : num++,num--
+        let num = 10;
+        num++;
+        console.log(num);
+
+        // 대입연산자 : =
+        // 값을 할당해줄 때 사용
+        // 복합대입연산자
+        let num1 = 5;
+        num1 += 2;
+        console.log(num1);
+
+        // 비교연산자 : 피연산자들 사이의 크기를 판단하여 참/거짓 반환
+        let num2 = 5;
+        let num3 = 3;
+        console.log("num2 > num3", num2 > num3);
+
+        // "==" vs "==="
+        // == : 두 개의 피연산자의 값이 같은지를 비교
+        //      자료형이 달라도 비교가 가능(자동 형변환 비교)
+        // === : 두 개의 피연산자의 값과 타입이 같은지를 비교
+        //       자료형이 다르면 false
+        let num4 = 2;
+        let num5 = "2";
+        console.log("num4 == num5", num4 == num5);
+        console.log("num4 === num5", num4 === num5);
+        console.log("num4 != num5", num4 != num5);
+        console.log("num4 !== num5", num4 !== num5);
+        
+    </script>
+</body>
+
+</html>

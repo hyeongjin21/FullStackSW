@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자료형
+        // 1. string (문자열)
+        let name = "김형진";
+        let name2 = '김형진';
+        let name3 = `김형진`;
+        console.log("str",typeof(name));
+        
+        // 2. number (숫자)
+        let num1 = 3;
+        let num2 = 3.14;
+        console.log("num1",typeof(num1));
+        console.log("num2",typeof(num2));
+        
+        // 3. boolean (논리값 : 참/거짓)
+        let isLoggined = true;
+        console.log("isLoggined",isLoggined);
+
+        // 4. undefined / null
+        // 4-1) undefined : 정의되지 않음(선언만 되고, 값 할당하지 않음)
+        // JavaScript 자료형을 동적으로 정의(값을 보고 자료형을 판단)
+        // 선언할 때 값이 없으면 판단이 불가능하기 때문에 undefined로 정의
+
+        let data;
+        console.log("data",data);
+        console.log("typeof undefined",typeof(data));
+        
+        
+        // 4-2) null : 의도적으로 변수 공간을 비움
+        let data2 = null;
+        console.log("data2",data2);
+        console.log("typeof null",typeof(data2));
+        
+
+    </script>
+</body>
+</html>

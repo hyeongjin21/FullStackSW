@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        th,td {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 성적표 만들기 실습
+
+        // 1. 과목수를 입력받는다.("과목수를 입력해주세요.")
+        // 2. 과목수대로 과목명을 입력받는다.("점수를 입력할 과목명을 입력해주세요 >>")
+        // 3. 과목수대로 점수를 입력받는다.("(과목명)의 점수를 입력")
+        // 4. 총합과 평균을 계산
+        // 5. 과목, 점수, 총합, 평균을 표로 띄운다 (document.write)
+
+        let classNum = parseInt(prompt("과목수를 입력해주세요"));
+        const className = [];
+        const classScore = [];
+        let sum = 0;
+        let avg = 0;
+        document.write("<table>");
+        document.write("<tr>");
+        for (let i = 0; i < classNum; i++) {
+            className.push(prompt("점수를 입력할 과목명을 입력해주세요 >>"))
+            document.write(`<th>${className[i]}</th>`);
+        }
+        document.write("<th>총합</th>")
+        document.write("<th>평균</th>")
+        document.write("</tr>");
+        document.write("<tr>");
+        for (let j = 0; j < classNum; j++) {
+            classScore.push(parseInt(prompt(`${className[j]}의 점수를 입력`)))
+            document.write(`<td>${classScore[j]}</td>`);
+            sum += classScore[j];
+        }
+        avg = sum / classNum;
+        document.write(`<td>${sum}</td>`)
+        document.write(`<td>${avg}</td>`)
+        document.write("</tr>");
+
+        document.write("</table>");
+
+
+    </script>
+</body>
+
+</html>

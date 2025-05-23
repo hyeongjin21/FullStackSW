@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+    <script>
+        // Event target 객체
+        // 이벤트를 발생시킨 HTML 요소 그 자체
+        // e.target
+        document.querySelector("button").addEventListener('click',(e)=>{
+            alert(e.target.innerText);
+        });
+    </script>
+</body>
+</html>

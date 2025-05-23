@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 배열 함수
+        let fruits = ['사과', '배', '오렌지'];
+        // 배열이나 객체의 경우에는 let 보다는 const를 더 많이 쓴다.
+        // const로 선언을 해도 내부의 데이터 조작에 지장받지 않는다.
+
+        // 1. push
+        // 배열의 가장 마지막 부분에 데이터를 추가
+        // arr.push(data);
+        fruits.push('딸기');
+        console.log(fruits);
+
+        // 길이가 있는 빈 배열에 push를 사용할 경우,
+        // 빈 공간 뒤쪽으로 추가된다(빈 공간을 사용하지 않는다.)
+        let empty5 = new Array(5);
+        empty5.push(5);
+        console.log(empty5);
+
+        // 2. pop
+        // 배열의 가장 마지막 데이터를 삭제
+        // 삭제하는 데이터를 반환
+        // arr.pop();
+        let lastFruit = fruits.pop();
+        console.log("pop으로 삭제된 값", lastFruit);
+        console.log(fruits);
+
+        // 3. unshift
+        // 배열의 가장 첫 부분에 데이터를 추가
+        // arr.unshift(data)
+        fruits.unshift("귤");
+        console.log(fruits);
+
+        // 4. shift
+        // 배열의 가장 첫번째 데이터를 삭제
+        // 삭제하는 데이터를 반환
+        // arr.shift();
+        let firstFruit = fruits.shift();
+        console.log("shift로 삭제된 값", firstFruit);
+        console.log(fruits);
+
+        // 5. includes
+        // 배열 안에 특정 데이터가 포함되어 있는지 확인
+        // arr.includes(data)
+        // return 타입 : boolean
+        console.log("사과 있니?", fruits.includes("사과"))
+        console.log("딸기 있니?", fruits.includes("딸기"))
+
+        // 6. indexOf
+        // 배열 안에 특정 데이터의 인덱스 번호를 확인
+        // arr.indexOf(data)
+        // return 타입 : 정수(number)
+        console.log("배의 인덱스 번호", fruits.indexOf("배"));
+        console.log("딸기의 인덱스 번호", fruits.indexOf("딸기"));
+
+        // 7. slice
+        // 특정 값들을 기존 배열을 건드리지 않고, 새로운 배열로 복제해서 만든다
+        // arr.slice(시작인덱스,마지막인덱스+1)
+        // return 타입 : 배열
+        const fruits2 = fruits.slice(0, 2);
+        console.log("slice", fruits2);
+        console.log("fruits", fruits)
+
+        // 8. splice
+        // 기존의 배열에 접근해서 특정 값들을 삭제하거나 대체
+        // arr.splice(시작인덱스,삭제할개수,대체할값(선택))
+        fruits.splice(1, 2, "딸기");
+        console.log("splice", fruits);
+
+        // 9. reverse
+        // 기존의 배열의 순서를 역순으로 변경
+        // arr.reverse()
+        const arr = [1, 2, 3, 4];
+        console.log("reverse 이전 : ", arr);
+        arr.reverse();
+        console.log("reverse 이후 : ", arr);
+
+        // 10. sort
+        // 기존 배열을 정렬
+        // arr.sort() : 유니코드 순서대로 정렬(문자열 정렬)
+        // arr.sort((a, b) => a - b) : 숫자를 오름차순으로 정렬
+        // arr.sort((a, b) => b - a) : 숫자를 오름차순으로 정렬
+        const arr2 = [10, 1, 5];
+        // 유니코드 정렬
+        arr2.sort();
+        console.log("sort 이후 : ", arr2);
+
+        // 오름차순 정렬
+        // arr2.sort((a, b) => a - b);
+        // (a,b) => a-b 는
+        // (a,b) -> {return a-b;}와 동일하다
+        arr2.sort((a, b) => { return a - b; });
+        console.log("오름차순 sort 이후 : ", arr2);
+
+        // 내림차순 정렬
+        arr2.sort((a, b) => b - a);
+        console.log("내림차순 sort 이후 : ", arr2);
+
+    </script>
+</body>
+
+</html>

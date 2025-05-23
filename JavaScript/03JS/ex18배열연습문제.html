@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 연습문제) 배열함수를 활용해 제시된 1~9번 문제 풀이
+        const fruits = [
+            "apple", "avocado", "banana", "blueberry", "cherry", "dragon fruit",
+            "fig", "grape", "kiwi", "lime", "mango", "orange", "oriental melon", "pear",
+            "peach", "pineapple", "shine muscat", "strawberry", "tomato",
+            "water melon", "yuja"
+        ];
+        // 1. fruits의 마지막 요소인 "yuja" 삭제 (pop)
+        fruits.pop();
+        console.log(fruits);
+        // 2. fruitdp "grapefruit" 추가하기 (push)
+        fruits.push("grapefruit");
+        console.log(fruits);
+        // 3. fruit에 "cherry tomato", "pine nut", "korean blackberry" 추가하기 (push)
+        fruits.push("cherry tomato", "pine nut", "korean blackberry");
+        console.log(fruits);
+        // 4. fruits에 "orange"가 있는지 확인하기 (includes)
+        console.log(fruits.includes("orange"));
+        // 5. fruits에 "kiwi"가 몇번째에 있는지 확인하기 (indexOf)
+        console.log(fruits.indexOf("kiwi"));
+        // 6. fruits에 "water melon"을 "melon"으로 변경하기 (indexOf, index)
+        fruits[fruits.indexOf("water melon")] = "melon";
+        console.log(fruits);
+        // 7. fruits에 "lime" 부터 3개의 요소를 기존 배열에 삭제하기 (indexOf, splice)
+        fruits.splice(fruits.indexOf("lime"), 3);
+        console.log(fruits);
+        // 8. fruits에 "shine muscat" 이후의 값을 제거하기 (indexOf, splice)
+        fruits.splice(fruits.indexOf("shine muscat"));
+        console.log(fruits);
+        // 9. "p"로 시작되는 요소인 "pear" 부터 "pineapple" 까지 가져와 새로운 배열에 저장하기 (indexOf, slice)
+        const newFruits = fruits.slice(fruits.indexOf("pear"), fruits.indexOf("pineapple") + 1);
+        console.log(newFruits);
+    </script>
+</body>
+
+</html>

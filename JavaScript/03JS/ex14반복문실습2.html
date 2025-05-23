@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent {
+            display: flex;
+            gap: 10px;
+        }
+        .item{
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 구구단을 만들어보자!
+        document.write("<div id='parent'>");
+        for (let i = 2; i < 10; i++) {
+            document.write("<div class='item'>");
+            document.write(`[${i}단]<br>`)
+            for (let j = 1; j < 10; j++) {
+                document.write(`${i} X ${j} = ${i * j}<br>`);
+            }
+            document.write("</div>");
+        }
+        document.write("</div>");
+    </script>
+</body>
+
+</html>

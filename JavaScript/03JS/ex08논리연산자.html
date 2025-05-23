@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 논리연산자
+        // 1. NOT 연산자(!)
+        // 논리값 앞에 !를 붙인다 -> 기존값이 반대로 바뀐다
+
+        let isCheck = true;
+        isCheck = !isCheck;
+
+        // 2. AND 연산자(&&)
+        // 두 논리값이 모두 True면 True
+        // 두 논리값 중 하나라도 False면 False
+        console.log("true && false",true && false);
+        console.log("true && true",true && true);
+
+        // 3. OR 연산자(||)
+        // 두 논리값 중 하나라도 true 면 true
+        // 두 논리값이 모두 false면 true
+        console.log("true || true",true || true)
+        console.log("true || false",true || false);
+        
+        // 4. 삼항(조건)연산자
+        // -> 조건식 ? true실행문 : false 실행문;
+
+        let input = parseInt(prompt("숫자를 입력해주세요."))
+        input % 2 === 0 ? console.log("짝수입니다.") : console.log("홀수입니다.");
+
+    </script>
+</body>
+
+</html>

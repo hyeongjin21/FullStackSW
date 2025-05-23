@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1. 인라인 방식
+        - html 태그 안에 JavaScript를 직접 사용하는 방식
+        - 장점 : 단순한 로직처리를 빠르게 해줄 수 있다.
+        - 단점 : 코드 노출이 매우 쉽고, 재사용성이 매우 어렵다.
+    -->
+    <input type="button" value="버튼클릭" onclick="alert('Hello World')">
+
+    <script>
+        // 2. 내부 방식
+        // html body 태그 안의 script 태그 안에 작성
+        // - 장점 : 빠르게 작성이 가능하다. html 코드와 JavaScript 코드를 동시에 확인 가능
+        // - 단점 : 코드 노출이 쉽고, 재사용이 어렵다.
+        console.log("내부에서 작성한 내용입니다.")
+    </script>
+    <!-- <script src="js\external.js"></script> -->
+    <!-- 
+        3. 외부 방식
+        - 외부에서 작성한 JavaScript 파일을 불러와서 사용하는 방식
+        - script 태그의 src 속성을 사용하여 불러온다
+        - 장점 : 코드 재사용성이 매우 높고, 보안에 유리
+     -->
+    <script src="./js/external.js"></script>
+</body>
+</html>
