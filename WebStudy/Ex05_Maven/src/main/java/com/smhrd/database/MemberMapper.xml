@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespace 속성 : mapper에 있는 id를 그룹화 하는 속성 
+  		-> 다른 mapper에 있는 id는 중복가능, 같은 mapper에 있는 id는 중복 불가
+ 		-> 정확한 id를 찾기 위해 mapper별로 namespace 지정
+ 		-> 주로 mapper의 인터페이스경로로 작성  -->
+	<!-- ?(바인드변수) -> #{필드명 or 변수명} -->
+  <mapper namespace="com.smhrd.database.MemberMapper">
+  	<insert id="join" parameterType="Member">
+  		insert into member values(#{id},#{pw},#{name})
+  	</insert>
+  	<select id="login" parameterType="Member" resultType="Member">
+  		select * from member where id=#{id} and pw=#{pw}
+  	</select>
+  </mapper>
+  

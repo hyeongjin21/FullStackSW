@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      #infoCard {
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        width: 300px;
+        margin: 20px auto;
+        background-color: #f8f8f8;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      #errorMsg {
+        color: red;
+      }
+    </style>
+
+</head>
+<body>
+        <h1>포켓몬 정보 검색기</h1>
+    <input type="text" id="pokemonName" placeholder="예: pikachu" />
+    <button id="searchBtn">검색</button>
+    
+    <div id="infoCard" class="hidden">
+      <h2 id="pokeName"></h2>
+      <img id="pokeImage" alt="포켓몬 이미지" />
+      <p><strong>도감번호:</strong> <span id="pokeId"></span></p>
+      <p><strong>키:</strong> <span id="pokeHeight"></span> dm</p>
+      <p><strong>몸무게:</strong> <span id="pokeWeight"></span> kg</p>
+      <p><strong>기본 경험치:</strong> <span id="pokeExp"></span></p>
+      <p><strong>타입:</strong> <span id="pokeTypes"></span></p>
+    </div>
+
+    <p id="errorMsg" class="hidden"></p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // 포켓몬 공개 api에 접근해서 포켓몬 정보를 불러오기
+        // 방식 : GET
+        // url : https://pokeapi.co/api/v2/pokemon/{id or name}/
+
+        const searchBtn = document.getElementById('searchBtn');
+        searchBtn.addEventListener("click",async()=>{
+            const pokemonName = document.getElementById('pokemonName');
+            // console.log(pokemonName.value);
+            const URL = `https://pokeapi.co/api/v2/pokemon/${pokemonName.value}/`;
+
+            // 이미지, 도감번호, 키, 몸무게, 기본 경험치, 타입
+            // 이미지 : res.data.sprites.front_default
+            // 도감번호 : res.data.id
+            // 키 : res.data.height
+            // 몸무게 : res.data.weight
+            // 기본 경험치 : res.data.base_experlence
+            // 타입 : res.data.types // 배열
+            //          res.data.type[index].type
+            // 위 내용을 infoCard 
+
+            try{
+                const res = await axios.get(URL);
+                // console.log(res.data);
+                // console.log(res.data.id);
+                // setAttribute("src", value) : src추가하고 value를 넣어준다.
+                document.getElementById('pokeName').innerText = res.data.name;
+                document.getElementById('pokeImage').setAttribute("src",res.data.sprites.front_default);
+                document.getElementById('pokeId').innerText = res.data.id;
+                document.getElementById('pokeHeight').innerText = res.data.height;
+                document.getElementById('pokeWeight').innerText = res.data.weight;
+                document.getElementById('pokeExp').innerText = res.data.base_experience;
+                let type = ""
+                for(let i = 0; i < res.data.types.length; i++){
+                    type += res.data.types[i].type.name+" ";
+                }
+                document.getElementById('pokeTypes').innerText = type;
+                document.getElementById('infoCard').classList.remove('hidden');
+
+
+
+            }catch(err){
+                console.error(err);
+                const errorMsg = document.getElementById('errorMsg');
+                errorMsg.classList.remove('hidden');
+                errorMsg.innerText = '포켓몬을 찾을 수 없습니다.';
+            }
+
+
+        })
+    </script>
+</body>
+</html>

@@ -162,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Ex01_Servlet" path="/Ex01_Servlet" reloadable="true" source="org.eclipse.jst.jee.server:Ex01_Servlet"/><Context docBase="Ex02_Jsp" path="/Jsp" reloadable="true" source="org.eclipse.jst.jee.server:Ex02_Jsp"/><Context docBase="Ex03_CookieSession" path="/CookieSession" reloadable="true" source="org.eclipse.jst.jee.server:Ex03_CookieSession"/></Host>
+      <Context docBase="Ex01_Servlet" path="/Ex01_Servlet" reloadable="true" source="org.eclipse.jst.jee.server:Ex01_Servlet"/><Context docBase="Ex02_Jsp" path="/Jsp" reloadable="true" source="org.eclipse.jst.jee.server:Ex02_Jsp"/><Context docBase="Ex03_CookieSession" path="/CookieSession" reloadable="true" source="org.eclipse.jst.jee.server:Ex03_CookieSession"/><Context docBase="Ex04_Scope" path="/Scope" reloadable="true" source="org.eclipse.jst.jee.server:Ex04_Scope"/><Context docBase="Ex05_Maven" path="/Ex05_Maven" reloadable="true" source="org.eclipse.jst.j2ee.server:Ex05_Maven"/></Host>
     </Engine>
   </Service>
 </Server>

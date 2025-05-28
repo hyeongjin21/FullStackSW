@@ -1,0 +1,10 @@
+1. cd "C:\Users\smhrd\Desktop\study"
+2. git init
+3. git remote add origin https://github.com/hyeongjin21/FullStackSW.git
+4. git add .
+5. git commit -m "초기 커밋"
+
+git pull origin main
+
+git branch -M main             # 브랜치 이름이 main이 아니라면 변경
+git push -u origin main        # GitHub에 푸시

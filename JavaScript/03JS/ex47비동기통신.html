@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">영화 정보 요청</button>
+    <!-- 외부 라이브러리 가지고 와서 사용 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- API 적용 -->
+    <div id = "result">
+        
+    </div>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click",async ()=>{
+            // async를 함수 앞에 붙여주면 await 사용
+            try{
+                const URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
+                const res = await axios.get(URL,{
+                    params : {
+                        key :"464bd1ba31f6dd6fcbf9cb646a7d77ef",
+                        targetDt : "20250525"
+                    },
+                });
+                console.log(res);
+                // 불러온 영화 정보를 화면에 표 형태로 띄운다.
+                /*
+                    ras.data 객체 ={
+                        boxOddiceResult : {
+                            boxofficeType : "일별 박스오피스"
+                            dailyBoxOfficeList : {
+
+                            }
+                        }
+                    }
+                */
+               const movieList = res.data.boxOfficeResult.dailyBoxOfficeList;
+               const addHtml = document.getElementById("result");
+                let htmlString = '<table id="" border="1">';
+                // addText.innerHTML += `<table id="" border="1">`;
+                    htmlString += `<thead>`;
+                    htmlString += `<tr>`;
+                    htmlString += `<th>순위</th>`;
+                    htmlString += `<th>영화명</th>`;
+                    htmlString += `<th>개봉일</th>`;
+                    htmlString += `</tr>`;
+                    htmlString += `</thead>`;
+                    htmlString += `<tbody>`
+                for(let i = 0; i < movieList.length; i++){
+
+                    // console.log(res.data.boxOfficeResult.dailyBoxOfficeList[i].rank)
+                    // console.log(res.data.boxOfficeResult.dailyBoxOfficeList[i].movieNm)
+                    // console.log(res.data.boxOfficeResult.dailyBoxOfficeList[i].openDt)
+                    htmlString += `<tr>`
+                    htmlString += `<td>${movieList[i].rank}</td>`;
+                    htmlString += `<td>${movieList[i].movieNm}</td>`;
+                    htmlString += `<td>${movieList[i].openDt}</td>`;
+                    htmlString += `</tr>`
+                }
+                htmlString += `</tbody>`
+                htmlString += `</table>`;
+                addHtml.innerHTML = htmlString;
+            }catch(err){
+                console.error(err);
+            }
+
+        })
+    </script>
+</body>
+</html>
