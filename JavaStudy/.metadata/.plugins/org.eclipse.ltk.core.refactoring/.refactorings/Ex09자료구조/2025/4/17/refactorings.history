@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;list&apos; in &apos;ex02HashMap사용하기.ex03아나그램구하기.solution1(...)&apos; to &apos;map&apos;&#x0D;&#x0A;- Original project: &apos;Ex09자료구조&apos;&#x0D;&#x0A;- Original element: &apos;ex02HashMap사용하기.ex03아나그램구하기.solution1(String, String).list&apos;&#x0D;&#x0A;- Renamed element: &apos;list&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;list&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;ex02HashMap사용하기{ex03아나그램구하기.java[ex03아나그램구하기~solution1~QString;~QString;@list!173!235!198!201!QHashMap\&lt;QString;QInteger;&gt;;!0!false" name="map" references="true" stamp="1745281716743" version="1.0"/>
+</session>

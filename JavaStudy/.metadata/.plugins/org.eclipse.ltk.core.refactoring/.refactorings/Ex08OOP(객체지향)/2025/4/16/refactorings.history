@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;exBankbook&apos; to &apos;exBank&apos;&#x0D;&#x0A;- Original project: &apos;Ex08OOP(객체지향)&apos;&#x0D;&#x0A;- Original element: &apos;Ex08OOP(객체지향)/src/exBankbook&apos;&#x0D;&#x0A;- Renamed element: &apos;Ex08OOP(객체지향)/src/exBank&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;exBankbook&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;exBankbook" name="exBank" qualified="false" references="true" stamp="1744856348911" textual="false" version="1.0"/>
+</session>
