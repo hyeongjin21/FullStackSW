@@ -1,0 +1,62 @@
+##################################
+# Java & Spring Boot 관련 무시 항목
+##################################
+
+# 빌드 결과물
+JavaStudy/target/
+JavaStudy/bin/
+JavaStudy/out/
+
+# 클래스 파일
+*.class
+
+# 로그 및 임시파일
+*.log
+*.tmp
+*.bak
+
+# IDE 설정
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+##################################
+# React 관련 무시 항목
+##################################
+
+# 의존성 디렉토리
+WebStudy/node_modules/
+
+# 빌드 결과물
+WebStudy/build/
+
+# 환경변수
+WebStudy/.env
+WebStudy/.env.local
+
+# 로그
+WebStudy/npm-debug.log*
+WebStudy/yarn-debug.log*
+WebStudy/yarn-error.log*
+
+##################################
+# 운영 체제 및 에디터 공통 무시 항목
+##################################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VSCode
+.vscode/
+
+# 기타
+*.swp
+*.swo

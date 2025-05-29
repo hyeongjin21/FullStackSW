@@ -2,7 +2,7 @@
 2. git init
 3. git remote add origin https://github.com/hyeongjin21/FullStackSW.git
 4. git add .
-5. git commit -m "초기 커밋"
+5. git commit -m "커밋 메세지"
 
 git pull origin main
 
