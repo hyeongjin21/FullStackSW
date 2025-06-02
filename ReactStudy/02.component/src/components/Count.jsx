@@ -6,8 +6,12 @@ const Count = () => {
     // state 선언
     const [count2, setCount2] = useState(0);
 
+    const addNum = (count2) =>{
+        count2 +=1;
+    }
+
     const handleClick2 = () => {
-        setCount2(count2 + 1);
+        setCount2(addNum);
         console.log("count2:",count2)
     }
 

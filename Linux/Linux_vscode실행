@@ -1,0 +1,12 @@
+Ctrl + Shift + p
+Remote-wsl: new Window선택
+맨위 선택
+ubuntu 선택
+폴더열기 선택
+id smhrd
+pw 123
+
+#nano를 사용하기
+- 파일에 여러줄 입력하기 편하게 사용하기 위해 설치
+sudo apt update
+sudo apt install nano

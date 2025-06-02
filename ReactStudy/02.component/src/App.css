@@ -18,3 +18,15 @@
 .team-info > h4{
     margin: 0;
 }
+
+.imgContainer{
+    border: 3px solid;
+    border-color: black;
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+}
+button{
+    width: 30px;
+    height: 30px;
+}

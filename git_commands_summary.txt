@@ -1,0 +1,71 @@
+
+Git 명령어 정리
+
+1. 기본 Git 사용 명령어
+- git init
+  현재 폴더를 Git 저장소로 초기화
+- git remote add origin [URL]
+  GitHub 저장소 연결
+- git status
+  현재 변경된 파일 상태 보기
+- git add .
+  모든 변경 파일 스테이징
+- git commit -m "메시지"
+  변경사항 기록
+- git push -u origin [브랜치명]
+  원격 저장소에 업로드 및 브랜치 연결 설정
+- git push
+  다음부터는 -u 없이 사용 가능
+
+2. 브랜치 관련 명령어
+- git branch
+  로컬 브랜치 확인
+- git checkout -b KHJ
+  KHJ 브랜치 생성 후 이동
+- git checkout KHJ
+  KHJ 브랜치로 이동
+- git push -u origin KHJ
+  원격에 브랜치 올리기
+
+3. 브랜치 병합 및 동기화
+- git checkout KHJ
+- git pull origin master
+  master 변경사항을 내 작업 브랜치에 반영
+- git checkout master
+- git pull origin master
+- git merge KHJ
+- git push origin master
+  브랜치 병합 후 푸시
+
+4. .gitignore 관련
+- .gitignore 생성
+  텍스트 파일로 직접 생성 (.gitignore)
+- 무시된 파일 반영
+  .gitignore 수정 후
+  git rm -r --cached .
+  git add .
+  git commit -m "Apply .gitignore"
+  이미 추적되던 파일을 무시하려면 캐시 제거 필요
+
+5. 기타 명령어
+- git rebase origin/master
+  master 위에 내 커밋들을 다시 쌓기 (이력 깔끔)
+- git add .
+- git rebase --continue
+  충돌 해결하고 리베이스 이어서 진행
+- git remote -v
+  원격 저장소 주소 확인
+
+6. 브랜치 전략 요약
+- 새 브랜치 생성 및 작업
+  git checkout -b 브랜치명
+  작업 → git add . → git commit
+  git push -u origin 브랜치명
+- master에서 변경사항 받기
+  git checkout 내브랜치
+  git pull origin master
+- 내 작업을 master에 병합
+  git checkout master
+  git pull origin master
+  git merge 내브랜치
+  git push origin master
