@@ -55,6 +55,8 @@ Git 명령어 정리
   충돌 해결하고 리베이스 이어서 진행
 - git remote -v
   원격 저장소 주소 확인
+- git submodule update --init --recursive
+  서브모듈 업데이트
 
 6. 브랜치 전략 요약
 - 새 브랜치 생성 및 작업
