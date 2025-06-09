@@ -26,8 +26,8 @@ const MenuBoard = () => {
             <h1>메뉴판</h1>
             <MenuNav onFilter={menuFilter}/>
             <div className='menu-list'>
-                {menus.map((v) => (
-                    <MenuItem menu={v} />
+                {menus.map((v,i) => (
+                    <MenuItem key={i} menu={v} />
                 ))}
             </div>
         </div>
